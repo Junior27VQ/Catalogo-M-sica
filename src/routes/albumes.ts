@@ -1,9 +1,10 @@
 import { Router } from 'express';
-import { obtenerAlbums, crearAlbum, actualizarAlbum, eliminarAlbum } from '../controllers/album/controller.js';
+import { obtenerAlbums, obtenerAlbumPorId, crearAlbum, actualizarAlbum, eliminarAlbum } from '../controllers/album/controller.js';
 
 const router = Router();
 
 router.get('/', obtenerAlbums);
+router.get('/:id', obtenerAlbumPorId)
 router.post('/', crearAlbum);
 router.put('/:id', actualizarAlbum);
 router.delete('/:id', eliminarAlbum);
